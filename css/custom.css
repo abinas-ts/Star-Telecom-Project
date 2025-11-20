@@ -1,0 +1,209 @@
+/* ------------------------------
+   HEADER BACKGROUND
+------------------------------ */
+.bg-custom {
+    background: linear-gradient(90deg, #5E463B, #8D7264, #A68D7C);
+}
+
+.c-btn {
+    background: linear-gradient(90deg, #8D7264, #A68D7C);
+    color: rgb(230, 225, 162);
+    border: solid 3px #8D7264;
+    border-radius: 5px;
+    transition: 0.3s;
+    
+}
+
+.active-btn {
+    background: linear-gradient(90deg,#6a564a, #e7c8b5, #8d7667) !important;
+    color: #000 !important;
+    border-color: #5a4c76 !important;
+}
+
+.my-btn-outline{
+    color: #705326;
+    border-color: #e2dad4;
+    background-color: #ffffff;
+}
+.my-btn-outline:hover{
+    color: #463111;
+    background: #e9c6b5;
+    border-color: #e9c6b5;
+}
+
+
+
+.offer-btn{
+    color: rgb(230, 225, 162);
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+}
+.offer-btn:hover{
+    color: rgb(247, 244, 205);
+    font-size: 30px;
+}
+
+.my-btn{
+    color: rgb(190, 189, 166);
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.my-btn:hover {
+    color: rgb(224, 223, 190);
+    font-size: 22px;
+}
+
+.side-btn{
+    align-items: center;
+    color: #705326;
+    background: linear-gradient(90deg,#8D7264, #ffd9c6, #A68D7C);
+    border-color: #3f305a;
+    font-weight: 500;
+    transition: 0.3s;
+    width: 90%;
+    margin: 20px 10px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 8px;
+
+}
+.side-btn:hover {
+    background: linear-gradient(90deg, #d6ab95, #fce5d9, #d4b39d);
+    color: #000;
+    border-color: #766596;
+    width: 97%;
+    margin: 20px 0px ;
+    transition: 0.3s;
+}
+
+
+
+/* ------------------------------
+   HEADER ICON STYLE
+------------------------------ */
+.header-icons a {
+
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.header-icons .icon-btn {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.header-icons .icon-btn i {
+    font-size: 20px;
+}
+
+.header-icons .icon-btn:hover {
+    background: rgba(228, 205, 104, 0.486);
+    backdrop-filter: blur(4px);
+}
+
+/* brand */
+.brand-btn {
+    color: #705326;
+    background: linear-gradient(90deg,#8D7264, #ffd9c6, #A68D7C);
+    border-color: #3f305a;
+    font-weight: 500;
+    transition: 0.3s;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.brand-btn:hover {
+    background: linear-gradient(90deg, #d6ab95, #fce5d9, #d4b39d);
+    color: #000;
+    border-color: #766596;
+    transition: 0.3s;
+}
+
+/* ------------------------------
+   FOOTER SECTION
+------------------------------ */
+.site-footer {
+    background: linear-gradient(90deg, #5E463B, #8D7264, #A68D7C);
+    color: #cbd5e1;
+    padding: 60px 0 20px;
+    font-size: 14px;
+}
+
+.site-footer a {
+    color: #cbd5e1;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo img {
+    max-height: 38px;
+}
+
+/* Social Buttons */
+.social-btns a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.03);
+    margin-right: 8px;
+}
+
+/* Newsletter input */
+.newsletter .form-control {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #fff;
+}
+
+/* Footer bottom bar */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    margin-top: 24px;
+    padding-top: 18px;
+    color: #94a3b8;
+}
+
+
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 575.98px) {
+    .site-footer {
+        padding: 32px 0;
+    }
+
+    .social-btns a {
+        margin-bottom: 8px;
+    }
+}
+
+#pills-login, 
+#pills-register {
+    color: #000 
+}
+
+#pills-login i,
+#pills-register i {
+    color: #000 
+}

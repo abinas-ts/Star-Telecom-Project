@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Telecom</title>
+    <link rel="icon" type="image/png" href="/images/star.png">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!--My css -->
+    <link href="/css/custom.css" rel="stylesheet">
+    <link href="/css/card.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="sticky-top mb-3">
+        <!-- Main Header -->
+        <section class="bg-custom container-fluid py-2">
+
+            <div class="row d-flex align-items-center justify-content-between">
+
+                <!-- Mobile menu -->
+                <div class="col-1 d-block d-lg-none ">
+                    <button type="button" class="btn " data-bs-toggle="offcanvas"
+                        data-bs-target="#mobileSidebar">☰</button>
+                </div>
+
+                <!-- Offcanvas -->
+
+                <div class="offcanvas offcanvas-start bg-custom " tabindex="-1" id="mobileSidebar">
+
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title">Phone Brands</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <div>
+                            <!-- Samsung -->
+                            <button class="btn side-btn d-flex align-items-center gap-1" id="samsung">
+                                <i class="fa-brands fa-samsung"></i> Samsung
+                            </button>
+
+                            <!-- Apple -->
+                            <button class="btn side-btn d-flex align-items-center gap-1" id="apple">
+                                <i class="fa-brands fa-apple"></i> Apple
+                            </button>
+
+                            <!-- Xiaomi -->
+                            <button class="btn side-btn d-flex align-items-center gap-1" id="xiaomi">
+                                <i class="fa-solid fa-mobile-screen-button"></i> Xiaomi
+                            </button>
+
+                            <!-- Oppo -->
+                            <button class="btn side-btn d-flex align-items-center gap-1" id="oppo">
+                                <i class="fa-solid fa-o"></i> Oppo
+                            </button>
+
+                            <!-- Vivo -->
+                            <button class="btn side-btn d-flex align-items-center gap-1" id="vivo">
+                                <i class="fa-solid fa-v"></i> Vivo
+                            </button>
+
+                            <!-- Realme -->
+                            <button class="btn side-btn d-flex align-items-center gap-1">
+                                <i class="fa-solid fa-r"></i> Realme
+                            </button>
+
+                            <!-- Huawei -->
+                            <button class="btn side-btn d-flex align-items-center gap-1">
+                                <i class="fa-brands fa-huawei"></i> Huawei
+                            </button>
+
+                            <!-- Infinix -->
+                            <button class="btn side-btn d-flex align-items-center gap-1">
+                                <i class="fa-solid fa-mobile-retro"></i> Infinix
+                            </button>
+
+                            <!-- Tecno -->
+                            <button class="btn side-btn d-flex align-items-center gap-1">
+                                <i class="fa-solid fa-t"></i> Tecno
+                            </button>
+
+                            <!-- others -->
+                            <button class="btn side-btn d-flex align-items-center gap-1">
+                                <i class="fa-solid fa-mobile-screen-button"></i> Others
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- LOGO -->
+                <div class="col col-lg-3 col-sm-2 d-flex justify-content-center align-items-center">
+                    <a href="#" class="d-inline-block text-center" style="width:auto; margin: auto;" id="logo">
+                        <img src="/images/star.png" alt="Logo" style="width: 100%; height: 80%;">
+                    </a>
+                </div>
+                <!-- Search box -->
+                <div class="col col-sm-6 col-lg-4">
+                    <form class="d-flex align-items-center" role="search">
+                        <input class="form-control rounded-start-pill" type="search" placeholder="search..."
+                            aria-label="Search">
+                        <button class="btn btn-light rounded-end-pill ms-1" type="submit"><i
+                                class="bi bi-search"></i></button>
+                    </form>
+                </div>
+
+                <!--  HEADER BUTTONS -->
+                <div class="col col-lg-5 d-none d-lg-block">
+
+                    <div class=" d-flex justify-content-center align-items-center gap-2">
+
+                        <button type="button" class="c-btn">
+                            <a href="#" class="offer-btn">
+                                <i class="bi bi-gift"></i> Offer
+                            </a>
+                        </button>
+
+                        <button type="button" class="btn">
+                            <a class="my-btn" href="#">
+                                <i class="bi bi-cart"></i> Cart
+                            </a>
+                        </button>
+
+                        <button type="button" class="btn">
+                            <a class="my-btn" href="#">
+                                <i class="bi bi-geo-alt"></i> Location
+                            </a>
+                        </button>
+
+                        <button type="button" class="btn">
+                            <a class="my-btn" href="#" id="toploginbtn">
+                                <i class="bi bi-person"></i> Login
+                            </a>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Brands Buttons -->
+        <section class="d-none d-lg-block">
+
+            <div class="btn-group sticky d-flex justify-content-center gap-1" id="btngroup">
+
+                <!-- Samsung -->
+                <button class="btn brand-btn d-flex align-items-center gap-1" id="Samsung">
+                    <i class="fa-brands fa-samsung"></i> Samsung
+                </button>
+
+                <!-- Apple -->
+                <button class="btn brand-btn d-flex align-items-center gap-1" id="Apple">
+                    <i class="fa-brands fa-apple"></i> Apple
+                </button>
+
+                <!-- Xiaomi -->
+                <button class="btn brand-btn d-flex align-items-center gap-1" id="Xiaomi">
+                    <i class="fa-solid fa-mobile-screen-button"></i> Xiaomi
+                </button>
+
+                <!-- Oppo -->
+                <button class="btn brand-btn d-flex align-items-center gap-1" id="Oppo">
+                    <i class="fa-solid fa-o"></i> Oppo
+                </button>
+
+                <!-- Vivo -->
+                <button class="btn brand-btn d-flex align-items-center gap-1" id="Vivo">
+                    <i class="fa-solid fa-v"></i> Vivo
+                </button>
+
+                <!-- Realme -->
+                <button class="btn brand-btn d-flex align-items-center gap-1" id="Realme">
+                    <i class="fa-solid fa-r"></i> Realme
+                </button>
+
+                <!-- Huawei -->
+                <button class="btn brand-btn d-flex align-items-center gap-1" id="Huawei">
+                    <i class="fa-brands fa-huawei"></i> Huawei
+                </button>
+
+                <!-- Infinix -->
+                <button class="btn brand-btn d-flex align-items-center gap-1" id="Infinix">
+                    <i class="fa-solid fa-mobile-retro"></i> Infinix
+                </button>
+
+                <!-- Tecno -->
+                <button class="btn brand-btn d-flex align-items-center gap-1" id="Tecno">
+                    <i class="fa-solid fa-t"></i> Tecno
+                </button>
+
+                <!-- Others -->
+                <button class="btn brand-btn d-flex align-items-center gap-1" id="Others">
+                    <i class="fa-solid fa-mobile-screen-button"></i> Others
+                </button>
+
+            </div>
+
+
+        </section>
+
+        <!-- Mobile Footer -->
+        <section class="d-lg-none fixed-bottom bg-custom py-2 ">
+
+            <div class="d-flex align-items-center justify-content-around">
+
+                <a href="#" class="my-btn">
+                    <i class="bi bi-gift"></i> Offer
+                </a>
+                <a class="my-btn" href="#">
+                    <i class="bi bi-cart"></i> Cart
+                </a>
+
+                <a class="my-btn" href="#">
+                    <i class="bi bi-geo-alt"></i> Location
+                </a>
+                <a class="my-btn" href="#" id="downloginbtn">
+                    <i class="bi bi-person"></i> Login
+                </a>
+            </div>
+        </section>
+    </header>
+
+
+
+
+    <!-- cards -->
+    <main class="container py-4">
+
+        <!-- login form -->
+        <div class="d-none" id="loginform">
+            <!-- navs -->
+            <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link brand-btn" id="tab-login" data-bs-toggle="pill" href="#pills-login" role="tab"
+                        aria-controls="pills-login" aria-selected="true">Login</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link brand-btn" id="tab-register" data-bs-toggle="pill" href="#pills-register"
+                        role="tab" aria-controls="pills-register" aria-selected="false">Register</a>
+                </li>
+            </ul>
+            <!-- navs -->
+
+            <!-- content -->
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+                    <form>
+                        <div class="text-center mb-3">
+                            <p>Sign in with:</p>
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-link btn-floating mx-1 ">
+                                <i class="fab fa-google"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-github"></i>
+                            </button>
+                        </div>
+
+                        <p class="text-center">or:</p>
+
+                        <!-- Email input -->
+                        <div data-mdb-input-init class="form-outline mb-4">
+                            <input type="email" id="loginName" class="form-control" />
+                            <label class="form-label" for="loginName">Email or username</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div data-mdb-input-init class="form-outline mb-4">
+                            <input type="password" id="loginPassword" class="form-control" />
+                            <label class="form-label" for="loginPassword">Password</label>
+                        </div>
+
+                        <!-- 2 column grid layout -->
+                        <div class="row mb-4">
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <!-- Checkbox -->
+                                <div class="form-check mb-3 mb-md-0">
+                                    <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
+                                    <label class="form-check-label" for="loginCheck"> Remember me </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 d-flex justify-content-center">
+                                <!-- Simple link -->
+                                <a href="#!" class="text-decoration-none">Forgot password?</a>
+                            </div>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" data-mdb-button-init data-mdb-ripple-init
+                            class="btn brand-btn px-3 mb-4">Sign in</button>
+
+                        <!-- Register buttons -->
+                        <div class="text-center">
+                            <p>Not a member? <a href="#!" class="text-decoration-none">Register</a></p>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
+                    <form>
+                        <div class="text-center mb-3">
+                            <p>Sign up with:</p>
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-google"></i>
+                            </button>
+
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+
+                            <button type="button" data-mdb-button-init data-mdb-ripple-init
+                                class="btn btn-link btn-floating mx-1">
+                                <i class="fab fa-github"></i>
+                            </button>
+                        </div>
+
+                        <p class="text-center">or:</p>
+
+                        <!-- Name input -->
+                        <div data-mdb-input-init class="form-outline mb-4">
+                            <input type="text" id="registerName" class="form-control" />
+                            <label class="form-label" for="registerName">Name</label>
+                        </div>
+
+                        <!-- Username input -->
+                        <div data-mdb-input-init class="form-outline mb-4">
+                            <input type="text" id="registerUsername" class="form-control" />
+                            <label class="form-label" for="registerUsername">Username</label>
+                        </div>
+
+                        <!-- Email input -->
+                        <div data-mdb-input-init class="form-outline mb-4">
+                            <input type="email" id="registerEmail" class="form-control" />
+                            <label class="form-label" for="registerEmail">Email</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div data-mdb-input-init class="form-outline mb-4">
+                            <input type="password" id="registerPassword" class="form-control" />
+                            <label class="form-label" for="registerPassword">Password</label>
+                        </div>
+
+                        <!-- Repeat Password input -->
+                        <div data-mdb-input-init class="form-outline mb-4">
+                            <input type="password" id="registerRepeatPassword" class="form-control" />
+                            <label class="form-label" for="registerRepeatPassword">Repeat password</label>
+                        </div>
+
+                        <!-- Checkbox -->
+                        <div class="form-check d-flex justify-content-center mb-4">
+                            <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
+                                aria-describedby="registerCheckHelpText" />
+                            <label class="form-check-label" for="registerCheck">
+                                I have read and agree to the terms
+                            </label>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn brand-btn my-btn-outline mb-3 px-3">Sign up</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- CARD -->
+        <div class="row g-4" id="products">
+
+            <!-- Card 1 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a class="card product-card shadow-sm position-relative text-decoration-none" href="#">
+                    <span class="discount-badge text-white">12% OFF</span>
+                    <img src="/images/galaxy A35.jpg" class="product-img" alt="">
+                    <div class="card-body text-center">
+                        <h6 class="fw-semibold">Samsung Galaxy A35</h6>
+                        <div class="text-black fw-bold fs-5">৳ 32,999</div>
+                        <div class="text-muted text-decoration-line-through">৳ 36,999</div>
+                        <button class="btn my-btn-outline w-100 mt-2">Add to Cart</button>
+                        <button class="btn brand-btn w-100 mt-2">Buy Now</button>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a class="card product-card shadow-sm position-relative text-decoration-none" href="#">
+                    <span class="discount-badge text-white">10% OFF</span>
+                    <img src="/images/oneplus 12R.jpeg" class="product-img" alt="">
+                    <div class="card-body text-center">
+                        <h6 class="fw-semibold">OnePlus 12R</h6>
+                        <div class="text-black fw-bold fs-5">৳ 49,999</div>
+                        <div class="text-muted text-decoration-line-through">৳ 54,999</div>
+                        <button class="btn my-btn-outline w-100 mt-2">Add to Cart</button>
+                        <button class="btn brand-btn w-100 mt-2">Buy Now</button>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a class="card product-card shadow-sm position-relative text-decoration-none" href="#">
+                    <span class="discount-badge text-white">8% OFF</span>
+                    <img src="/images/s23 fe.jpeg" class="product-img" alt="">
+                    <div class="card-body text-center">
+                        <h6 class="fw-semibold">Samsung S23 FE</h6>
+                        <div class="text-black fw-bold fs-5">৳ 69,999</div>
+                        <div class="text-muted text-decoration-line-through">৳ 74,999</div>
+                        <button class="btn my-btn-outline w-100 mt-2">Add to Cart</button>
+                        <button class="btn brand-btn w-100 mt-2">Buy Now</button>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a class="card product-card shadow-sm position-relative text-decoration-none" href="#">
+                    <span class="discount-badge text-white">15% OFF</span>
+                    <img src="/images/redmi 13 pro.jpeg" class="product-img" alt="">
+                    <div class="card-body text-center">
+                        <h6 class="fw-semibold">Redmi Note 13 Pro</h6>
+                        <div class="text-black fw-bold fs-5">৳ 27,999</div>
+                        <div class="text-muted text-decoration-line-through">৳ 30,999</div>
+                        <button class="btn my-btn-outline w-100 mt-2">Add to Cart</button>
+                        <button class="btn brand-btn w-100 mt-2">Buy Now</button>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a class="card product-card shadow-sm position-relative text-decoration-none" href="#">
+                    <span class="discount-badge text-white">14% OFF</span>
+                    <img src="images/infinix note 30 pro.jpeg" class="product-img" alt="">
+                    <div class="card-body text-center">
+                        <h6 class="fw-semibold">Infinix Note 30 Pro</h6>
+                        <div class="text-black fw-bold fs-5">৳ 21,999</div>
+                        <div class="text-muted text-decoration-line-through">৳ 24,999</div>
+                        <button class="btn my-btn-outline w-100 mt-2">Add to Cart</button>
+                        <button class="btn brand-btn w-100 mt-2">Buy Now</button>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a class="card product-card shadow-sm position-relative text-decoration-none" href="#">
+                    <span class="discount-badge text-white">9% OFF</span>
+                    <img src="/images/oppo reno 11.jpeg" class="product-img" alt="">
+                    <div class="card-body text-center">
+                        <h6 class="fw-semibold">Oppo Reno 11</h6>
+                        <div class="text-black fw-bold fs-5">৳ 44,999</div>
+                        <div class="text-muted text-decoration-line-through">৳ 48,999</div>
+                        <button class="btn my-btn-outline w-100 mt-2">Add to Cart</button>
+                        <button class="btn brand-btn w-100 mt-2">Buy Now</button>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a class="card product-card shadow-sm position-relative text-decoration-none" href="#">
+                    <span class="discount-badge text-white">7% OFF</span>
+                    <img src="/images/vivo v27.png" class="product-img" alt="">
+                    <div class="card-body text-center">
+                        <h6 class="fw-semibold">Vivo V27</h6>
+                        <div class="text-black fw-bold fs-5">৳ 39,999</div>
+                        <div class="text-muted text-decoration-line-through">৳ 42,999</div>
+                        <button class="btn my-btn-outline w-100 mt-2">Add to Cart</button>
+                        <button class="btn brand-btn w-100 mt-2">Buy Now</button>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="col-6 col-md-4 col-lg-3">
+                <a class="card product-card shadow-sm position-relative text-decoration-none" href="#">
+                    <span class="discount-badge text-white">11% OFF</span>
+                    <img src="/images/realme 12 pro.jpeg" class="product-img" alt="">
+                    <div class="card-body text-center">
+                        <h6 class="fw-semibold">Realme 12 Pro</h6>
+                        <div class="text-black fw-bold fs-5">৳ 33,999</div>
+                        <div class="text-muted text-decoration-line-through">৳ 37,999</div>
+                        <button class="btn my-btn-outline w-100 mt-2">Add to Cart</button>
+                        <button class="btn brand-btn w-100 mt-2">Buy Now</button>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <!-- samsung -->
+        <div class="d-none" id="sampro">
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+                <div class="col-6 col-md-4 col-lg-3">
+                    <a class="card product-card shadow-sm position-relative text-decoration-none" href="#">
+                        <span class="discount-badge text-white">12% OFF</span>
+                        <img src="/images/galaxy A35.jpg" class="product-img" alt="">
+                        <div class="card-body text-center">
+                            <h6 class="fw-semibold">Samsung Galaxy A35</h6>
+                            <div class="text-black fw-bold fs-5">৳ 32,999</div>
+                            <div class="text-muted text-decoration-line-through">৳ 36,999</div>
+                            <button class="btn my-btn-outline w-100 mt-2">Add to Cart</button>
+                            <button class="btn brand-btn w-100 mt-2">Buy Now</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="site-footer my-4">
+        <div class="container">
+            <div class="row gy-4">
+
+                <!-- Brand / About -->
+                <div class="col-12 col-md-4">
+                    <div class="footer-logo mb-3">
+                        <!-- Replace src with your logo -->
+                        <img src="/images/star.png" alt=" logo">
+                    </div>
+                    <p class="mb-2 fw-bold "> Connect with Social </p>
+                    <div class="social-btns mt-2">
+                        <a href="#" aria-label="facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="youtube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-6 col-md-2">
+                    <h6 class="text-white">Quick link</h6>
+                    <ul class="list-unstyled mt-3">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Advertise</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div class="col-6 col-md-2">
+                    <h6 class="text-white">Brand</h6>
+                    <ul class="list-unstyled mt-3">
+                        <li><a href="#">Samsung</a></li>
+                        <li><a href="#">Xiaomi</a></li>
+                        <li><a href="#">Oppo</a></li>
+                        <li><a href="#">Vivo</a></li>
+                        <li><a href="#">Realme</a></li>
+                        <li><a href="#">Huawei</a></li>
+                        <li><a href="#">Infinix</a></li>
+                        <li><a href="#">Tecno</a></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+
+                <!-- Latest posts (sample) -->
+                <div class="col-6 col-md-2">
+                    <h6 class="text-white">Latest</h6>
+                    <ul class="list-unstyled mt-3">
+                        <li><a href="#">iPhone 17 Review</a></li>
+                        <li><a href="#">Top 10 Smartphones 2025</a></li>
+                        <li><a href="#">Upcoming Smartphones </a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-12 col-md-2">
+                    <h6 class="text-white">Newsletter</h6>
+                    <p class="small mt-2">To Get Upcoming Phones, Subscribe</p>
+                    <form class="newsletter mt-2" onsubmit="event.preventDefault(); alert('Subscribed');">
+                        <input class="form-control me-2" type="email" placeholder="Email..." aria-label="Email">
+                        <button class=" btn bg-custom my-2" type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="container-fluid">
+            <div class=" d-flex flex-column flex-sm-row justify-content-between align-items-center mt-4 py-3"
+                style="background-color: #8D7264">
+                <div>
+                    <small>&copy; <span id="year"></span> Star-Telecom — All rights reserved.</small>
+                </div>
+                <div class="mt-2 mt-sm-0">
+                    <small>Powered by <a href="#">Tech-Shilpo</a> · <a href="#">Privacy</a> · <a
+                            href="#">Terms</a></small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>
