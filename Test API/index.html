@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registion Form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <form>
+
+        Name: <input type="text" id="name"><br><br>
+        Password: <input type="text" id="password"><br><br>
+
+        <button type="button" onclick="save()">Save</button>
+        <br><br>
+        <div > <i id="response"></i> </div>
+
+    </form>
+    <script>
+
+
+
+
+        function save() {
+
+            let name = $('#name').val();
+            let password = $('#password').val();
+
+            let users = {
+                "Name": name,
+                "Password": password,
+            };
+
+            $.ajax({
+                url: 'api.php',
+                method: 'POST',
+                dataType: 'json',
+                data: users,
+                success: function (response) {
+                    $('#response').html(response.message);
+
+                },
+                error: function (xhr, status, error) {
+                    console.error('AJAX request failed:', status, error);
+                },
+                complete: function () {
+                    console.log('AJAX request completed.');
+                }
+            });
+        };
+
+
+    </script>
+
+
+</body>
+
+</html>
